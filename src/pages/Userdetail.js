@@ -26,7 +26,8 @@ const UserDetail = () => {
       } catch (err) {
         console.error('Ошибка получения пользователя:', err);
         if (err.response?.status === 401 || err.response?.status === 403) {
-          window.location.href = '/login';
+          alert("У вас нет прав для редактирования")
+          navigate('/dashboard')
         }
       }
     };

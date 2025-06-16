@@ -24,7 +24,14 @@ const EventForm = ({ eventId }) => {
       navigate('/events');
     } catch (err) {
       console.error('Ошибка при отправке формы:', err);
-      alert('Не удалось сохранить данные. Проверьте подключение к API.');
+      if (err.response?.status === 403){
+        alert ('У вас нет прав на это')
+        navigate ('/dashboard')
+      }
+      else {
+        alert('Не удалось сохранить данные. Проверьте подключение к API.');
+        navigate ('/dashboard')
+      }
     }
   };
 

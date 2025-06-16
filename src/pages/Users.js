@@ -15,6 +15,10 @@ const Users = () => {
         setLoading(false);
       } catch (err) {
         console.error('Ошибка получения пользователей:', err);
+        if (err.response?.status === 403) {
+          alert("У вас нет прав на просмотр");
+          navigate('/dashboard');
+        }
         setLoading(false);
       }
     };
@@ -40,14 +44,7 @@ const Users = () => {
     <div className="users-list-container">
       <div className="users-header">
         <h2>Список пользователей</h2>
-        <div className="header-actions">
-          <button 
-            className="back-btn"
-            onClick={() => navigate('/dashboard')}
-          >
-            Назад в панель
-          </button>
-        </div>
+        
       </div>
 
       <table className="users-table">
@@ -88,6 +85,14 @@ const Users = () => {
           ))}
         </tbody>
       </table>
+      <div className="header-actions">
+          <button 
+            className="back-btn"
+            onClick={() => navigate('/dashboard')}
+          >
+            Назад в панель
+          </button>
+        </div>
     </div>
   );
 };

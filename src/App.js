@@ -11,6 +11,7 @@ import EventDetail from './pages/Eventdetail';
 import EventForm from './pages/Eventform';
 import UserDetail from './pages/Userdetail';
 import PrivateRoute from './components/PrivateRoute';
+import Backups from './pages/Backups';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
     <Route path="/events/form" element={<EventForm />} />
     <Route path="/users/" element={<Users />} />
     <Route path="/users/:id" element={<UserDetail />} />
+    <Route path="/backups" element={<Backups />} />
   </Route>
         {/* Неизвестный маршрут */}
         <Route path="*" element={<h2>Страница не найдена</h2>} />
