@@ -1,0 +1,149 @@
+/* Events Component Styles */
+.events-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.events-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  padding-bottom: 15px;
+  border-bottom: 1px solid #e0e0e0;
+  position: relative;
+}
+
+.events-header h2 {
+  color: #2c3e50;
+  margin: 0;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.events-table-container {
+  overflow-x: auto;
+}
+
+.events-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.events-table th,
+.events-table td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.events-table th {
+  background-color: #f8f9fa;
+  font-weight: 600;
+  color: #333;
+}
+
+.events-table tr:hover {
+  background-color: #f5f5f5;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s;
+}
+
+.back-btn {
+  background-color: #6c757d;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  position: absolute;
+  left: 0;
+}
+
+.back-btn:hover {
+  background-color: #5a6268;
+}
+
+.add-btn {
+  background-color: #28a745;
+  color: white;
+  position: absolute;
+  right: 0;
+}
+
+.add-btn:hover {
+  background-color: #218838;
+}
+
+.view-btn {
+  background-color: #17a2b8;
+  color: white;
+}
+
+.view-btn:hover {
+  background-color: #138496;
+}
+
+.delete-btn {
+  background-color: #dc3545;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #c82333;
+}
+
+.event-link {
+  text-decoration: none;
+  color: #3498db;
+  font-size: 16px;
+}
+
+.event-link:hover {
+  text-decoration: underline;
+}
+
+.loading {
+  text-align: center;
+  padding: 40px;
+  font-size: 18px;
+  color: #666;
+}
+
+@media (max-width: 768px) {
+  .events-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  
+  .events-table th,
+  .events-table td {
+    padding: 8px 10px;
+    font-size: 14px;
+  }
+  
+  .actions {
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  button {
+    width: 100%;
+    padding: 6px;
+  }
+}
